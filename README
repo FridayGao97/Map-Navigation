@@ -1,0 +1,60 @@
+Acknowledgement:
+link:
+https://drive.google.com/drive/folders/0BzukoWTLryYpRE13WmI2OEliNzA
+http://bbs.ahalei.com/thread-4419-1-1.html
+https://eclass.srv.ualberta.ca/mod/page/view.php?id=2520164
+https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/overview-of-quicksort
+
+Description:
+This code will load an Edmonton map and show a cursor for the current location on the map. The cursor can move around the whole map, and the screen will be refreshed by a new section of the map. But the cursor will not exceed the boundary of map. The user can choose the rating of the restaurant from one to five at the right side of the touch screen. In addition, if user press the joystick, the program will calculate and rank the nearest restaurant of the corresponding rating by quick sort. Then the screen will display the closest restaurant around the cursor position. Also, user can move the joystick upward and downward to choose the restaurant. If the user press the joystick again, the screen returns you to the map with the selected restaurant at the centre of the map section.
+
+Accessories:
+1. Arduino Mega Board (AMG)
+2. USB cable
+3. Joystick
+3. Screen
+4. Wires
+5. SD card
+
+Wiring Instructions:
+Board Pin <---> Arduino Pin
+===========================
+GND     <—->      GND
+Vin     <—->      5V
+3Vo     <—->      NOT CONNECTED
+CLK     <—->      52
+MISO    <—->      50
+MOSI    <—->      51
+CS      <—->      10
+D/C     <—->       9
+RST     <—->       NOT CONNECTED
+Lite    <—->       NOT CONNECTED
+Y+      <—->       A2 (analog pin)
+X+      <—->       4  (digital pin)
+Y-      <—->       5  (digital pin)
+X-      <—->       A3 (analog pin)
+CCS     <—->       6
+CD      <—->       NOT CONNECTED
+
+Arduino Pin <——-> Joystick Pin
+============================
+Analog pin A1 <—-> pin VRx
+Analog pin A0 <—-> pin VRY
+Digital pin 2 <—-> pin SW
+5v <—-> 5v
+GND <—-> GND
+
+Code Instructions:
+1. Connect the Arduino Mega 2560 to the VM by USB cable.
+2. Go to the correct directory.
+3. Upload the code by “make upload” command in the terminal.
+4. The centre of edmonton map will show up on the display initially.
+5. The Joystick can control the cursor move around, and when it hit the edge, it will go to another section of map.
+6. Push the joystick further can increase the movement speed of the cursor.
+7. Touch the number at the right side of the display to choose the star of the restaurant, and user can select or cancel the highlight freely.
+8. Press the joystick, program will be displaying a list of restaurants with correct selected rating. They will be displayed based on their distances to the current location of the cursor on map.
+9. Press the joystick again, the program will find the location of the restaurant.
+
+Assumptions:
+1. The touch screen is not very sensitive.
+2. It might occur timeout when uploading, please make upload again.
